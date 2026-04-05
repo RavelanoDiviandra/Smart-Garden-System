@@ -1,4 +1,4 @@
-#Smart Garden System: Dual Sensor Adaptive Logic 
+# Smart Garden System: Dual Sensor Adaptive Logic 
 
 Sistem kontrol penyiraman tanaman otomatis (*Smart Garden*) berbasis mikrokontroler. Sistem ini menggunakan logika adaptif berdasarkan intensitas cahaya lingkungan (Siang/Malam) dan menerapkan metode penstabilan data (Moving Average) serta batas Histeresis untuk mencegah osilasi pada pompa air (*Relay Chatter*).
 
@@ -14,20 +14,21 @@ Sistem ini dirancang untuk dijalankan pada arsitektur **Arduino Uno/Nano** (AVR)
 6. Pompa Air DC mini & Selang
 
 ### Matriks Pengkabelan (Pinout)
-| Komponen           | Pin Arduino  | Tipe Logika                 
-|  Sensor Tanah      |     `A3`     | Analog Input                
-|  Sensor LDR        |     `A1`     | Analog Input 
-|  Relay Pompa       |     `7`      | Digital Output (Active LOW) 
-|  LED Indikator     |     `13`     | Digital Output (Active HIGH) 
-|  LCD I2C (SDA)     |     `A4`     | I2C Data 
-|  LCD I2C (SCL)     |     `A5`     | I2C Clock 
+| Komponen | Pin Arduino | Tipe Logika |
+| :--- | :--- | :--- |
+| Sensor Tanah | `A3` | Analog Input |
+| Sensor LDR | `A1` | Analog Input |
+| Relay Pompa | `7` | Digital Output (Active LOW) |
+| LED Indikator | `13` | Digital Output (Active HIGH) |
+| LCD I2C (SDA) | `A4` | I2C Data |
+| LCD I2C (SCL) | `A5` | I2C Clock |
 
 ## Parameter Kalibrasi Sistem
 Sistem ini beroperasi dengan parameter adaptif yang mengubah ambang batas kekeringan tanah berdasarkan waktu:
-* Ambang Batas LDR (Senja):** `> 700` (Status berubah menjadi MALAM)
-* Batas Aktif Pompa (SIANG):** Tanah `> 800` (Kering)
-* Batas Aktif Pompa (MALAM):** Tanah `> 950` (Lebih kering, menghemat air di malam hari)
-* Histeresis (Batas Matikan Pompa):** `Batas Aktif - 100` (Untuk mencegah pompa hidup-mati secara berulang dalam waktu cepat). 
+* **Ambang Batas LDR (Senja):** `> 700` (Status berubah menjadi MALAM)
+* **Batas Aktif Pompa (SIANG):** Tanah `> 800` (Kering)
+* **Batas Aktif Pompa (MALAM):** Tanah `> 950` (Lebih kering, menghemat air di malam hari)
+* **Histeresis (Batas Matikan Pompa):** `Batas Aktif - 100` (Mencegah pompa hidup-mati secara berulang dalam waktu cepat)
 
 ## Deployment (Instalasi)
 
