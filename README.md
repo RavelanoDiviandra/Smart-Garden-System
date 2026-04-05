@@ -48,4 +48,4 @@ Sistem ini beroperasi dengan parameter adaptif yang mengubah ambang batas kekeri
 6. Klik tombol **Upload**.
 
 ### Diagram Skematik Rangkaian
-![Diagram Skematik Smart Garden](Smart-Garden-System.png)
+![Diagram Skematik Smart Garden](skematik_smart_garden.png)
