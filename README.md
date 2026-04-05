@@ -46,3 +46,6 @@ Sistem ini beroperasi dengan parameter adaptif yang mengubah ambang batas kekeri
    * Cari dan instal **LiquidCrystal I2C** (Pastikan alamat I2C Anda sesuai, misal: `0x27`).
 5. Pilih *Board* (Arduino Uno/Nano) dan *Port* yang sesuai pada menu `Tools`.
 6. Klik tombol **Upload**.
+
+### Diagram Skematik Rangkaian
+![Diagram Skematik Smart Garden](Smart-Garden-System.png)
